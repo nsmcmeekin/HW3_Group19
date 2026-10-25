@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string Address::getAddress() const
+string address::address_info()
 {
     string info = address_line1 + "\n";
 
