@@ -1,6 +1,7 @@
 #include "credit_card.h"
 #include <iostream>
 #include <string>
+#include <format>
 
 using namespace std;
 
@@ -29,7 +30,12 @@ bool credit_card::make_purchase(double purchase_amount) {
 }
 
 string credit_card::credit_card_info(){
-    return "Card Number: " + to_string(cc_number) +
-           "\nLimit: $" + to_string(limit) +
-           "\nCurrent Balance: $" + to_string(current_balance);
+    return std::format(
+        "Credit card number: {}\n"
+        "Credit Card Limit: ${:.2f}\n"
+        "Current Balance: ${:.2f}",
+        cc_number,
+        limit,
+        current_balance
+    );
 }
