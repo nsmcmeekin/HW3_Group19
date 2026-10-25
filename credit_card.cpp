@@ -12,6 +12,7 @@ bool credit_card::make_purchase(double purchase_amount) {
         cout << "Purchase declined: exceeds credit limit." << endl;
         return false;
     }
+}
     bool credit_card::make_payment(double payment_amount) {
         if (payment_amount <= 0) {
             cout << "Payment amount must be positive." << endl;
@@ -24,6 +25,7 @@ bool credit_card::make_purchase(double purchase_amount) {
         }
 
         return true;
+    
 }
 
 string credit_card::credit_card_info(){
